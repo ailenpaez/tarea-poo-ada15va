@@ -24,15 +24,12 @@ class Product {
 }
 
 function createItemId(item: User | Product): ItemId {
-  // Usar el operador instanceof para determinar qué ID retornar
-  // Según se trate de User o de Product.
   if (item instanceof User) {
     return `${item.name}--<${item.id}>--user`;
   } else if (item instanceof Product) {
     return `${item.name}--<${item.cost}>--product`;
   } else {
-   // `${string}--<${number}>--${string}`;
-    return "tipo-unknown--<0>--unknown"; //!->ACÁ TIENE QUE RESPETAR LA ESTRUCTURA DEL TYPE
+    return "tipo-unknown--<0>--unknown";
   }
 }
 

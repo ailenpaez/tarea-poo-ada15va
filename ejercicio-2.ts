@@ -5,7 +5,6 @@ class Individual {
   age;
 
   constructor(name: string, age: number) {
-    // Completar
     this.name = name;
     this.age = age;
   }
@@ -16,30 +15,26 @@ class Family {
   name;
 
   constructor(members: Individual[], name: string) {
-    // Completar
     this.members = members;
     this.name = name;
   }
 
   getOldestMember() {
-    const membersAges = this.members.map((individual) => individual.age); //& -> MAP CREA UN NUEVO ARRAY CON EDADES
-    const maxAge = Math.max(...membersAges); //! -> TOMA LOS ELEMENTOS DEL ARRAY CON LOS ... COMO PARAMETROS Y EL MÉTODO MATHMAX ENCUENTRA EL MAYOR
-    return maxAge; //^ Y RETORNA LA EDAD MAXINA
+    const membersAges = this.members.map((individual) => individual.age);
+    const maxAge = Math.max(...membersAges);
+    return maxAge;
   }
 }
 
-//! ??????? ACÁ PEDI AYUDA
 class Society {
   members;
 
   constructor(members: Family[]) {
-    // Completar
     this.members = members;
-    return; 
+    return;
   }
 
   getMembers(): Family[] {
-    // Completar
     return this.members;
   }
 }
