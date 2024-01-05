@@ -1,8 +1,8 @@
 // Para pasar el test, completar dónde esté incompleto, y corregir los tipos unknown.
 
 class Individual {
-  name;
-  age;
+  name: string;
+  age: number;
 
   constructor(name: string, age: number) {
     this.name = name;
@@ -11,8 +11,8 @@ class Individual {
 }
 
 class Family {
-  members;
-  name;
+  members: Individual[];
+  name: string;
 
   constructor(members: Individual[], name: string) {
     this.members = members;
@@ -21,17 +21,17 @@ class Family {
 
   getOldestMember() {
     const membersAges = this.members.map((individual) => individual.age);
-    const maxAge = Math.max(...membersAges);
+    const maxAge = Math.max(...membersAges); // los ... abren el array
     return maxAge;
   }
 }
 
 class Society {
-  members;
+  members: Family[];
 
   constructor(members: Family[]) {
     this.members = members;
-    return;
+
   }
 
   getMembers(): Family[] {
